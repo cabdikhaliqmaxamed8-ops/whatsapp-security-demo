@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Security Demo</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: white;
+  width: 85%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 5px 25px #0002;
+}
+
+.icon {
+  font-size: 65px;
+}
+
+h1 {
+  font-size: 27px;
+  color: #222;
+}
+
+.warning {
+  color: #bd7800;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.6;
+  color: #555;
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.link {
+  background: #111;
+  color: white;
+}
+
+.cancel {
+  background: #e8f4ed;
+  color: #16834a;
+}
+
+#message {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background: #e8f4ed;
+  border-radius: 10px;
+  color: #16834a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="warning">TRAINING DEMO — NOT WHATSAPP</div>
+
+  <div class="icon">💻 🛡️</div>
+
+  <h1>This may be a scam</h1>
+
+  <p>
+    This is an educational demonstration
+    of a WhatsApp device-linking warning.
+  </p>
+
+  <p>
+    Never link your account to a device
+    you do not recognize.
+  </p>
+
+  <button class="link" onclick="showMessage()">
+    Link Device (Demo Only)
+  </button>
+
+  <button class="cancel" onclick="cancelDemo()">
+    Don't Link
+  </button>
+
+  <div id="message"></div>
+
+</div>
+
+<script>
+function showMessage() {
+  const box = document.getElementById("message");
+  box.style.display = "block";
+  box.innerHTML =
+    "DEMO ONLY: No WhatsApp account has been linked. " +
+    "A real device link must be authorized through WhatsApp.";
+}
+
+function cancelDemo() {
+  const box = document.getElementById("message");
+  box.style.display = "block";
+  box.innerHTML =
+    "You chose not to link the device. Your account is safe.";
+}
+</script>
+
+</body>
+</html>
